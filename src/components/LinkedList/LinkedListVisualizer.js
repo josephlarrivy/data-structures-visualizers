@@ -12,11 +12,11 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
     console.log(list)
   }, [list])
 
-
-
   const nodes = list.toArray().map((value, index) => (
     <Node key={index} value={value} handleRemove={handleRemove}/>
   ));
+
+  
 
   if (nodes.length === 0) {
     return (
@@ -26,16 +26,9 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
     )
   }
 
-
-  // return (
-  //   <div className="nodes-container">
-  //     {nodes}
-  //   </div>
-  // );
-
-
   return (
     <div className="nodes-container">
+
       {list.getNodesAsObjects().map((current, index) => (
         <Node
           key={index}
@@ -44,6 +37,7 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
           head={current.head}
           tail={current.tail}
           next={current.next}
+          handleRemove={handleRemove}
           />
       )) }
     </div>

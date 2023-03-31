@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LinkedListVisualizer from "./LinkedListVisualizer";
+import Node from "./Node";
 
 const LinkedListForm = ({list, setList}) => {
   const [value, setValue] = useState("");
@@ -52,6 +53,7 @@ const LinkedListForm = ({list, setList}) => {
             required
           />
         </label>
+        <br></br>
         <label>
           Index:
           <input
@@ -62,6 +64,7 @@ const LinkedListForm = ({list, setList}) => {
             min="0"
           />
         </label>
+        <br></br>
         <button type="submit">Add Node</button>
       </form>
       <ul>{displayNodes}</ul>

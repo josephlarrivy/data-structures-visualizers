@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import './Node.css'
 
-const Node = ({ value, index, head, tail, next }) => {
+const Node = ({ value, index, head, tail, next, handleRemove}) => {
 
   const [nodeState, setNodeState] = useState("initialize")
 
@@ -24,7 +24,7 @@ const Node = ({ value, index, head, tail, next }) => {
       </div>
       <p>index: {index}</p>
       <hr></hr>
-      <p>next: {next?next:'null'}</p>
+      {next && <p>next: {next?next:'null'}</p>}
       {head && <p>head</p>}
       {tail && <p>tail</p>}
     </div>
