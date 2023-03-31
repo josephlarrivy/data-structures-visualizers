@@ -8,6 +8,7 @@ const LinkedListForm = ({list, setList}) => {
   const [displayNodes, setDisplayNodes] = useState([])
   const [listlength, setListLength] = useState(null)
 
+
   const handleAdd = (event) => {
     event.preventDefault();
     list.insert(Number(index), Number(value));
@@ -40,7 +41,7 @@ const LinkedListForm = ({list, setList}) => {
 
   return (
     <div>
-      <LinkedListVisualizer list={list} setList={setList} />
+      <LinkedListVisualizer list={list} setList={setList} handleRemove={handleRemove} />
       <h1>Linked List Form</h1>
       <form onSubmit={handleAdd}>
         <label>

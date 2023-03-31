@@ -99,6 +99,53 @@ class LinkedList {
     }
     return values;
   }
+
+  getNodesAsObjects() {
+    const vals = [];
+    let node = this.head;
+    while(node) {
+      if (this.length === 1) {
+        vals.push(
+          {
+            'head': true,
+            'tail': true,
+            'value': node.value,
+            'next': null,
+          }
+        );
+        return vals;
+      } else if (node === this.head) {
+        vals.push(
+          {
+            'head': true,
+            'tail': false,
+            'value': node.value,
+            'next': node.next.value,
+          }
+        );
+      } else if (node === this.tail) {
+        vals.push(
+          {
+            'head': false,
+            'tail': true,
+            'value': node.value,
+            'next': null,
+          }
+        );
+      } else {
+        vals.push(
+          {
+            'head': false,
+            'tail': false,
+            'value': node.value,
+            'next': node.next.value,
+          }
+        );
+      }
+      node = node.next;
+    }
+    return vals;
+  }
 }
 
 export default LinkedList;

@@ -7,10 +7,6 @@ const LinkedListDisplay = () => {
 
   const [list, setList] = useState(new LinkedList());
 
-  useEffect(() => {
-    console.log(list)
-  }, [list])
-  
 
   return (
     <div>
@@ -18,5 +14,6 @@ const LinkedListDisplay = () => {
     </div>
   )
 }
+
 
 export default LinkedListDisplay;
