@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import LinkedList from "./LinkedList";
 import LinkedListVisualizer from "./LinkedListVisualizer";
 
 const LinkedListForm = ({list, setList}) => {
@@ -41,8 +40,8 @@ const LinkedListForm = ({list, setList}) => {
 
   return (
     <div>
+      <h1>Linked List</h1>
       <LinkedListVisualizer list={list} setList={setList} handleRemove={handleRemove} />
-      <h1>Linked List Form</h1>
       <form onSubmit={handleAdd}>
         <label>
           Value:

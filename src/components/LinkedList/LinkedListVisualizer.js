@@ -40,6 +40,7 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
         <Node
           key={index}
           value={current.value}
+          index={index}
           head={current.head}
           tail={current.tail}
           next={current.next}
