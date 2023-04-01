@@ -10,11 +10,14 @@ const Node = ({ value, index, head, tail, next, handleRemove}) => {
     const timeoutId = setTimeout(() => {
       setNodeState("node");
     }, 1000);
-
     return () => {
       clearTimeout(timeoutId);
     };
   }, []);
+
+  const nodeHandleRemove = (event, index) => {
+    handleRemove(event, index)
+  }
 
 
   return (
@@ -24,9 +27,13 @@ const Node = ({ value, index, head, tail, next, handleRemove}) => {
       </div>
       <p>index: {index}</p>
       <hr></hr>
-      {next && <p>next: {next?next:'null'}</p>}
+      <p>next: {next!==null?next:'null'}</p>
       {head && <p>head</p>}
       {tail && <p>tail</p>}
+      {next&&
+        <button onClick={nodeHandleRemove}>remove</button>
+      }
+
     </div>
     
   );

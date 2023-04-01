@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LinkedListVisualizer from "./LinkedListVisualizer";
 import Node from "./Node";
+import './LinkedListForm.css'
 
 const LinkedListForm = ({list, setList}) => {
   const [value, setValue] = useState("");
@@ -18,7 +19,7 @@ const LinkedListForm = ({list, setList}) => {
   };
 
   const handleRemove = (event, index) => {
-    // event.preventDefault();1
+    event.preventDefault();
     list.remove(index);
     setList(list);
     setListLength(list.length)
@@ -42,7 +43,7 @@ const LinkedListForm = ({list, setList}) => {
   return (
     <div>
       <h1>Linked List</h1>
-      <LinkedListVisualizer list={list} setList={setList} handleRemove={handleRemove} />
+      <LinkedListVisualizer list={list} handleRemove={handleRemove} />
       <form onSubmit={handleAdd}>
         <label>
           Value:
@@ -51,9 +52,9 @@ const LinkedListForm = ({list, setList}) => {
             value={value}
             onChange={(event) => setValue(event.target.value)}
             required
+            max={999}
           />
         </label>
-        <br></br>
         <label>
           Index:
           <input
