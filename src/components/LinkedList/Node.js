@@ -2,17 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import './Node.css'
 
-const Node = ({ value, index, head, tail, next, handleRemove}) => {
-
-  const [nodeState, setNodeState] = useState("initialize")
+const Node = ({ value, index, head, tail, next, handleRemove, createArrowBeginEnd }) => {
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setNodeState("node");
-    }, 1000);
-    return () => {
-      clearTimeout(timeoutId);
-    };
+    createArrowBeginEnd()
   }, []);
 
   const nodeHandleRemove = (event, index) => {
@@ -27,7 +20,7 @@ const Node = ({ value, index, head, tail, next, handleRemove}) => {
       </div>
       <p>index: {index}</p>
       <hr></hr>
-      <p>next: {next!==null?next:'null'}</p>
+      <p className="next">next: {next!==null?next:'null'}</p>
       {head && <p>head</p>}
       {tail && <p>tail</p>}
       {next&&
