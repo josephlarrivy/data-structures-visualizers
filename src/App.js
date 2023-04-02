@@ -1,12 +1,23 @@
 import logo from './logo.svg';
-import './App.css';
-import LinkedListDisplay from './components/LinkedList/LinkedListDisplay';
+// import './App.css';
+import NavBar from './NavBar';
+
+import { BrowserRouter } from 'react-router-dom';
+
+import ApplicationRoutes from './ApplicationRoutes';
 
 function App() {
   return (
-    <div className="App">
-      <LinkedListDisplay />
-    </div>
+    <>
+      <BrowserRouter>
+        <div className='nav-div'>
+          <NavBar />
+        </div>
+        <div className='application-div'>
+          <ApplicationRoutes />
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -1,0 +1,26 @@
+nav {
+    width: inherit;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.nav-item {
+    display: inline-block;
+    /* margin-left: 2vh; */
+}
+
+nav a {
+    color: gray;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+nav a.active {
+    /* color: black;
+    text-decoration: none; */
+}
+
+#nav-logout {
+    /* color: gray;
+    text-decoration: none; */
+}

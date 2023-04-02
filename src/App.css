@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+
+.nav-div {
+  position: absolute;
+  width: 100%;
+  height: 5vh;
+}
+
+.application-div {
+  position: absolute;
+  width: 100%;
+  height: 95vh;
+  margin-top: 5vh;
+}

@@ -9,18 +9,10 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
   const [storeList, setStoreList] = useState(list)
 
   useEffect(() => {
-    let nodes = list.getNodesAsObjects()
-    console.log(nodes)
-    console.log(list)
     setStoreList(list)
   }, [list])
 
-  const nodes = list.toArray().map((value, index) => (
-    <Node key={index} value={value} handleRemove={handleRemove}/>
-  ));
-
-
-  if (nodes.length === 0) {
+  if (list.length === 0) {
     return (
       <div className="nodes-container">
         <p>use form to add nodes</p>
@@ -49,10 +41,7 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
             </div>
             :null}
         </>
-      )
-      
-      ) }
-    
+      ))}
     </div>
   );
 };
