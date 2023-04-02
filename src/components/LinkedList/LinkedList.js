@@ -129,7 +129,7 @@ class LinkedList {
             'head': false,
             'tail': true,
             'value': node.value,
-            'next': 'null',
+            'next': null,
           }
         );
       } else {

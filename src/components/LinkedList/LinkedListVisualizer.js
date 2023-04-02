@@ -32,17 +32,27 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
     <div className="nodes-container">
 
       {list.getNodesAsObjects().map((current, index) => (
-        <Node
-          key={index}
-          value={current.value}
-          index={index}
-          head={current.head}
-          tail={current.tail}
-          next={current.next}
-          handleRemove={handleRemove}
+        <>
+          <Node
+            key={index}
+            value={current.value}
+            index={index}
+            head={current.head}
+            tail={current.tail}
+            next={current.next}
+            handleRemove={handleRemove}
           />
-        
-      )) }
+          {current.next!=null
+            ?<div className="link">
+              <p>link</p>
+              <div className="arrow"></div>
+            </div>
+            :null}
+        </>
+      )
+      
+      ) }
+    
     </div>
   );
 };
