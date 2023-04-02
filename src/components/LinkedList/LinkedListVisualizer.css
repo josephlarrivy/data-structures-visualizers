@@ -3,7 +3,7 @@
     display: flex;
     width: 80%;
     margin-left: 10%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     justify-content: space-around;
     min-height: 100px;
     margin-bottom: 20px;

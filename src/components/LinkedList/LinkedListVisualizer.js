@@ -15,7 +15,7 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
   if (list.length === 0) {
     return (
       <div className="nodes-container">
-        <p>use form to add nodes</p>
+        <p></p>
       </div>
     )
   }

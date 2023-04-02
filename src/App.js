@@ -2,6 +2,8 @@ import logo from './logo.svg';
 // import './App.css';
 import NavBar from './NavBar';
 
+import './App.css'
+
 import { BrowserRouter } from 'react-router-dom';
 
 import ApplicationRoutes from './ApplicationRoutes';

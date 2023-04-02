@@ -8,7 +8,7 @@ const LinkedListForm = ({list, setList}) => {
   const [index, setIndex] = useState("");
   const [displayNodes, setDisplayNodes] = useState([])
   const [listlength, setListLength] = useState(null)
-
+  const [caption, setCaption] = useState('use form to add nodes')
 
   const handleAdd = (event) => {
     event.preventDefault();
@@ -16,6 +16,15 @@ const LinkedListForm = ({list, setList}) => {
     setList(list);
     setValue("");
     setIndex("");
+    if (index > list.length-1) {
+      setCaption(
+        `added: [node: (value: ${value}) (index: ${list.length - 1})]`
+      )
+    } else {
+      setCaption(
+        `added: [node: (value: ${value}) (index: ${index})]`
+      )
+    }
   };
 
   const handleRemove = (event, index) => {
@@ -23,6 +32,11 @@ const LinkedListForm = ({list, setList}) => {
     list.remove(index);
     setList(list);
     setListLength(list.length)
+    const val = event.target.closest('.node-wrapper').querySelector('.circle p').textContent
+    const idx = event.target.closest('.node-wrapper').querySelector('.idx').textContent
+    setCaption(
+      `removed: [node: (${val}) (${idx})]`
+    )
   };
 
   useEffect(() => {
@@ -43,6 +57,7 @@ const LinkedListForm = ({list, setList}) => {
   return (
     <div>
       <h1>Linked List</h1>
+      <p className="caption">{caption}</p>
       <LinkedListVisualizer list={list} handleRemove={handleRemove} />
       <form onSubmit={handleAdd}>
         <label>

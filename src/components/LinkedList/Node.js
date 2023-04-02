@@ -12,7 +12,7 @@ const Node = ({ value, index, head, tail, next, handleRemove }) => {
         <div className='circle'>
           <p>value: {value}</p>
         </div>
-        <p>index: {index}</p>
+        <p className="idx">index: {index}</p>
         {/* <hr></hr> */}
         <p
           className="next">
