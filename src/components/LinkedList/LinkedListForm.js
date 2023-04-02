@@ -68,7 +68,7 @@ const LinkedListForm = ({list, setList}) => {
         <br></br>
         <button type="submit">Add Node</button>
       </form>
-      <ul>{displayNodes}</ul>
+      {/* <ul>{displayNodes}</ul> */}
     </div>
   );
 };

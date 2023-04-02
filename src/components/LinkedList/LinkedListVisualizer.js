@@ -41,9 +41,8 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
           next={current.next}
           handleRemove={handleRemove}
           />
+        
       )) }
-      
-
     </div>
   );
 };
