@@ -2,15 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import './Node.css'
 
-const Node = ({ value, index, head, tail, next, handleRemove, createArrowBeginEnd }) => {
+const Node = ({ value, index, head, tail, next, handleRemove }) => {
 
   useEffect(() => {
-    createArrowBeginEnd()
-  }, []);
 
-  const nodeHandleRemove = (event, index) => {
-    handleRemove(event, index)
-  }
+  }, []);
 
 
   return (
@@ -23,9 +19,7 @@ const Node = ({ value, index, head, tail, next, handleRemove, createArrowBeginEn
       <p className="next">next: {next!==null?next:'null'}</p>
       {head && <p>head</p>}
       {tail && <p>tail</p>}
-      {next&&
-        <button onClick={nodeHandleRemove}>remove</button>
-      }
+      <button onClick={(event) => handleRemove(event, index)}>remove</button>
 
     </div>
     
