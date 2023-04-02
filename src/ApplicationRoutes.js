@@ -13,10 +13,6 @@ const ApplicationRoutes = () => {
 
   return (
     <>
-      {/* <NavBar
-        token={token}
-        setToken={setToken}
-      /> */}
       <Routes>
         <Route exact path="/"
           element={

@@ -16,7 +16,7 @@ const Node = ({ value, index, head, tail, next, handleRemove }) => {
         <p className="value">value: {value}</p>
         <p
           className="next">
-          next: {next !== null ? next : 'null'}
+          next.value: {next !== null ? next : 'null'}
         </p>
       </div>
       <button onClick={(event) => handleRemove(event, index)}>remove</button>
