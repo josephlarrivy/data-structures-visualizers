@@ -10,10 +10,10 @@ const Node = ({ value, index, head, tail, next, handleRemove }) => {
       <p className="node-icon">[node]</p>
       <div className="node">
         <div className='circle'>
-          <p>value: {value}</p>
+          <p>{value}</p>
         </div>
         <p className="idx">index: {index}</p>
-        {/* <hr></hr> */}
+        <p className="value">value: {value}</p>
         <p
           className="next">
           next: {next !== null ? next : 'null'}

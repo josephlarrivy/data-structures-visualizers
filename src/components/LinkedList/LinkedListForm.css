@@ -38,8 +38,35 @@ button[type="submit"]:hover {
     background-color: #564dff;
 }
 
+
+
 .caption {
     min-height: 22px;
     font-size: 20px;
-   
+}
+
+.highlight-on {
+    border: 2px solid white;
+    width: 50%;
+    margin-left: 25%;
+
+    animation: border-in-out;
+    animation-duration: 2s;
+}
+
+@keyframes border-in-out {
+    0%{
+        border: 2px solid #564dff;
+        background-color: #564dff;
+        opacity: 0.8;
+    }
+    100%{
+        border: 2px solid white;
+    }
+}
+
+.highlight-off {
+    width: 50%;
+    margin-left: 25%;
+    border: 2px solid white;
 }

@@ -25,4 +25,18 @@
     background-color: #564dff;
     width: 100%;
     height: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.arrowhead {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #564dff;
 }

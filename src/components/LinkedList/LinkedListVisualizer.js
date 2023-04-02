@@ -37,7 +37,9 @@ const LinkedListVisualizer = ({ list, handleRemove }) => {
           {current.next!=null
             ?<div className="link">
               <p>link</p>
-              <div className="arrow"></div>
+              <div className="arrow">
+                <div className="arrowhead"></div>
+              </div>
             </div>
             :null}
         </>

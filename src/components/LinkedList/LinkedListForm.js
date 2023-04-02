@@ -9,6 +9,15 @@ const LinkedListForm = ({list, setList}) => {
   const [displayNodes, setDisplayNodes] = useState([])
   const [listlength, setListLength] = useState(null)
   const [caption, setCaption] = useState('use form to add nodes')
+  const [captionHighlightStyle, setCaptionHighlightStyle] = useState('highlight-off')
+
+  const triggerCaptionHighlight = () => {
+    setCaptionHighlightStyle('highlight-on');
+    setTimeout(() => {
+      setCaptionHighlightStyle('highlight-off');
+    }, 2000);
+  };
+
 
   const handleAdd = (event) => {
     event.preventDefault();
@@ -25,6 +34,7 @@ const LinkedListForm = ({list, setList}) => {
         `added: [node: (value: ${value}) (index: ${index})]`
       )
     }
+    triggerCaptionHighlight()
   };
 
   const handleRemove = (event, index) => {
@@ -32,11 +42,12 @@ const LinkedListForm = ({list, setList}) => {
     list.remove(index);
     setList(list);
     setListLength(list.length)
-    const val = event.target.closest('.node-wrapper').querySelector('.circle p').textContent
+    const val = event.target.closest('.node-wrapper').querySelector('.value').textContent
     const idx = event.target.closest('.node-wrapper').querySelector('.idx').textContent
     setCaption(
       `removed: [node: (${val}) (${idx})]`
     )
+    triggerCaptionHighlight()
   };
 
   useEffect(() => {
@@ -57,7 +68,9 @@ const LinkedListForm = ({list, setList}) => {
   return (
     <div>
       <h1>Linked List</h1>
-      <p className="caption">{caption}</p>
+      <div className={captionHighlightStyle}>
+        <p className="caption">{caption}</p>
+      </div>
       <LinkedListVisualizer list={list} handleRemove={handleRemove} />
       <form onSubmit={handleAdd}>
         <label>
