@@ -1,31 +1,21 @@
-import React, {useEffect, useState} from "react";
-import StackForm from "./StackForm";
-import StackVisualizer from "./StackVisualizer";
+import React, {useState, useEffect} from "react";
+import StackHandler from "./StackHandler";
 import StackClass from "./StackClass";
+
 
 const StackDisplay = () => {
 
-  const [stack, setStack] = useState(null);
+  const [stack, setStack] = useState(new StackClass());
 
   useEffect(() => {
-    setStack(new StackClass())
+    console.log('total reload')
   }, [])
 
-  const addToStack = (value) => {
-    const newStack = stack.push(value)
-    setStack(newStack);
-  }
-
-  // const popFromStack = () => {
-  //   setStack(stack.pop())
-  // }
 
   return (
-    <div className="stack-display-container">
-      <h1>Stack</h1>
-      <StackVisualizer stack={stack}/>
-      <StackForm addToStack={addToStack}/>
-    </div>
+    <>
+      <StackHandler stack={stack} setStack={setStack}/>
+    </>
   )
 }
 

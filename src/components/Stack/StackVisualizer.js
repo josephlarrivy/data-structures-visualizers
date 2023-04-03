@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import StackClass from "./StackClass";
 
 
 const StackVisualizer = ({stack}) => {
@@ -6,20 +7,17 @@ const StackVisualizer = ({stack}) => {
   const [displayStack, setDisplayStack] = useState(stack)
 
   useEffect(() => {
-    setDisplayStack(stack)
-    if (displayStack.items) {
-      console.log(displayStack.items.length)
-    }
+    // console.log(displayStack)
   }, [stack])
 
   return (
     <div className="stack-visualizer">
       <p>stack visualizer</p>
       <ul>
-        {displayStack.items.length>=1
+        {/* {displayStack.items.length>=1
           ? <p>displayStack</p>
           : <p>test</p>
-        }
+        } */}
       </ul>
     </div>
   )

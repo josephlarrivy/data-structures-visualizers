@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-const StackForm = ({addToStack}) => {
+import './StackFrom.css'
+
+const StackForm = ({addToStack, popFromStack}) => {
 
   const [value, setValue] = useState('');
 
@@ -14,7 +16,7 @@ const StackForm = ({addToStack}) => {
     <form className="stack-form" onSubmit={handleSubmit}>
       <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
       <button type="submit">Add to Stack</button>
-      {/* <button onClick={popFromStack}>Pop</button> */}
+      <button onClick={popFromStack}>Pop</button>
     </form>
   );
 }

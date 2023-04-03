@@ -29,6 +29,19 @@ class StackClass {
     }
     return str;
   }
+
+  getFullStack() {
+    if (this.items.isEmpty) {
+      return []
+    } else  {
+      let fullStack = [];
+      for (let i = this.items.length; i > 0; i--) {
+        fullStack.push(this.items[i]
+        )
+      }
+      return fullStack
+    }
+  }
 }
 
 export default StackClass;
