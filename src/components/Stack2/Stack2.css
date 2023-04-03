@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+}
+
+.stack-display-container {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 70vh;
+    max-height: 70vh;
+    overflow-y: auto;
+    width: 20vw;
+    margin: 0 auto;
+}
+
+.buttons-container {
+    width: 30vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.button-stack {
+    padding: 10px 20px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-stack:hover {
+    background-color: #564dff;
+}

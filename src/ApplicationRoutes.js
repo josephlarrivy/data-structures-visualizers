@@ -4,8 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Home from "./components/Home";
 import LinkedListDisplay from './components/LinkedList/LinkedListDisplay';
-import StackDisplay from "./components/Stack/StackDisplay";
-
+import Stack from "./components/Stack2/Stack2";
 
 
 const ApplicationRoutes = () => {
@@ -25,7 +24,7 @@ const ApplicationRoutes = () => {
         />
         <Route exact path="/stack"
           element={
-            <StackDisplay />}
+            <Stack />}
         />
       </Routes>
 
