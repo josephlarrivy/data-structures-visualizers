@@ -1,7 +1,35 @@
 .item-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* margin-bottom: 2px; */
+    height: 40px;
+}
+
+.item-block {
     border: 1px solid black;
     text-align: center;
     border: 3px solid #564dff;
     border-radius: 5px;
-    margin-bottom: 2px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    margin-right: 5px;
+}
+
+.stack-head-tail {
+    /* border: 1px solid black; */
+    /* text-align: center; */
+    border: 2px solid #564dff;
+    border-radius: 5px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    color: #564dff;
+    font-weight: bold;
+    /* margin-bottom: 2px; */
 }

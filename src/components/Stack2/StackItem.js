@@ -4,12 +4,14 @@ import './StackItem.css'
 const StackItem = ({item, index}) => {
 
   useEffect(() => {
-    console.log(index)
+    // console.log(index)
   }, [])
 
   return (
     <div className="item-container">
-      <p>{item}</p>
+      <p className="item-block">{item.value}</p>
+      {item.head && <p className="stack-head-tail">head</p>}
+      {item.tail && <p className="stack-head-tail">tail</p>}
     </div>
   )
 }
