@@ -58,16 +58,9 @@ const StackDisplay2 = ({ stack }) => {
       )
       return setDisplayStack(stackAsObjects)
     }
-
-    setDisplayStack(stackAsObjects)
   }, [stack])
 
 
-
-
-  useEffect(() => {
-    console.log(displayStack)
-  }, [displayStack])
 
   return (
     <>

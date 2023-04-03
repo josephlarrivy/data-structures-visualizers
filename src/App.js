@@ -21,7 +21,7 @@ function App() {
       </BrowserRouter>
       <div className='footer'>
         <a href='https://josephlarrivy.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
-          www.josephlarrivy.com
+          written and maintained by www.josephlarrivy.com
         </a>
       </div>
 

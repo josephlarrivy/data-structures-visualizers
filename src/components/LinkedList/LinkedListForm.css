@@ -8,6 +8,7 @@ input {
     box-shadow: none;
     outline: none;
     width: 50px;
+    height: 8px;
     transition: border-color 0.3s ease-in-out;
 }
 
@@ -32,6 +33,7 @@ button[type="submit"] {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    margin-bottom: 30px;
 }
 
 button[type="submit"]:hover {
@@ -41,8 +43,8 @@ button[type="submit"]:hover {
 
 
 .caption {
-    min-height: 22px;
-    font-size: 20px;
+    min-height: 18px;
+    font-size: 16px;
 }
 
 .highlight-on {

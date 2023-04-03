@@ -20,6 +20,11 @@ const Home = () => {
             <Link to={`/stack`}>Stack</Link>
           </h1>
         </div>
+        <div className="square stack">
+          <h1 className="title">
+            <Link to={`/binarytree`}>Tree</Link>
+          </h1>
+        </div>
       </div>
     </div>
   )
