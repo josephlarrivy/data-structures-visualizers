@@ -14,6 +14,11 @@ const Home = () => {
           <Link to={`/linkedlist`}>LinkedList</Link>
         </h1>
       </div>
+      <div className="square">
+        <h1>
+          <Link to={`/stack`}>Stack</Link>
+        </h1>
+      </div>
     </div>
   )
 }
