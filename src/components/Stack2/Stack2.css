@@ -13,7 +13,7 @@ h1 {
 }
 
 .buttons-container {
-    width: 30vw;
+    width: 40vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -30,8 +30,25 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+
+    height: 40px;
+    width: 19vw;
+}
+
+.horazontal-rule {
+    width: 40vw;
+    margin: 0 auto;
 }
 
 .button-stack:hover {
     background-color: #564dff;
+}
+
+#number-input {
+    width: 15vw;
+}
+
+.stack-number-input {
+    margin-left: 31vw;
+    width: 15vw;
 }

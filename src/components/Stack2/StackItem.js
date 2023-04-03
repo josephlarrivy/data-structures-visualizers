@@ -9,7 +9,7 @@ const StackItem = ({item, index}) => {
 
   return (
     <div className="item-container">
-      <p className="item-block">{item.value}</p>
+      <p className="item-block">value: {item.value}</p>
       {item.head && <p className="stack-head-tail">head</p>}
       {item.tail && <p className="stack-head-tail">tail</p>}
     </div>

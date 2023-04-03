@@ -17,6 +17,19 @@
     align-items: center;
     width: 20vw;
     margin-right: 5px;
+
+    animation: added;
+    animation-duration: 1s;
+}
+
+@keyframes added {
+    0%{
+        background-color: #564dff;
+        color: white;
+    }
+    100%{
+
+    }
 }
 
 .stack-head-tail {
