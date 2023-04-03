@@ -1,4 +1,4 @@
-button {
+.button-stack {
     padding: 10px 20px;
     background-color: #6c63ff;
     color: #fff;
@@ -10,6 +10,6 @@ button {
     transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
+.button-stack:hover {
     background-color: #564dff;
 }

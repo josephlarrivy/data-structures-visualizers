@@ -11,7 +11,6 @@ const StackDisplay = () => {
     console.log('total reload')
   }, [])
 
-
   return (
     <>
       <StackHandler stack={stack} setStack={setStack}/>

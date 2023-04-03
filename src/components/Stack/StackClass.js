@@ -33,7 +33,7 @@ class StackClass {
   getFullStack() {
     if (this.items.isEmpty) {
       return []
-    } else  {
+    } else {
       let fullStack = [];
       for (let i = this.items.length; i > 0; i--) {
         fullStack.push(this.items[i]
@@ -43,6 +43,7 @@ class StackClass {
     }
   }
 }
+
 
 export default StackClass;
 
