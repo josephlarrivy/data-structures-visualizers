@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 
-const StackForm = () => {
+const StackForm = ({addToStack}) => {
+
+  const [value, setValue] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addToStack(value);
+    setValue('');
+  }
 
   return (
-    <div className="stack-form">
-      <p>stack form</p>
-    </div>
-  )
+    <form className="stack-form" onSubmit={handleSubmit}>
+      <input type="text" value={value} onChange={(e) => setValue(e.target.value)} />
+      <button type="submit">Add to Stack</button>
+      {/* <button onClick={popFromStack}>Pop</button> */}
+    </form>
+  );
 }
+
 
 export default StackForm;

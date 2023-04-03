@@ -1,4 +1,4 @@
-class Stack {
+class StackClass {
   constructor() {
     this.items = [];
   }
@@ -31,14 +31,15 @@ class Stack {
   }
 }
 
+export default StackClass;
 
-const myStack = new Stack();
+// const myStack = new Stack();
 
-myStack.push(1);
-myStack.push(2);
-myStack.push(3);
+// myStack.push(1);
+// myStack.push(2);
+// myStack.push(3);
 
-console.log(myStack.printStack()); // Output: "1 2 3"
+// console.log(myStack.printStack()); // Output: "1 2 3"
 
-myStack.pop();
-console.log(myStack.printStack()); // Output: "1 2"
+// myStack.pop();
+// console.log(myStack.printStack()); // Output: "1 2"
