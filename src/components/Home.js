@@ -7,17 +7,19 @@ import './Home.css'
 const Home = () => {
 
   return (
-    <div className="home">
-      <h1>Computer Science Visualizer</h1>
-      <div className="square">
-        <h1>
-          <Link to={`/linkedlist`}>LinkedList</Link>
-        </h1>
-      </div>
-      <div className="square">
-        <h1>
-          <Link to={`/stack`}>Stack</Link>
-        </h1>
+    <div className="home-container">
+      <h1>ComputerScienceVisualizer.com</h1>
+      <div className="home">
+        <div className="square linked-list">
+          <h1 className="title">
+            <Link to={`/linkedlist`}>LinkedList</Link>
+          </h1>
+        </div>
+        <div className="square stack">
+          <h1 className="title">
+            <Link to={`/stack`}>Stack</Link>
+          </h1>
+        </div>
       </div>
     </div>
   )

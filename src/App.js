@@ -19,6 +19,12 @@ function App() {
           <ApplicationRoutes />
         </div>
       </BrowserRouter>
+      <div className='footer'>
+        <a href='https://josephlarrivy.herokuapp.com/' target='_blank' rel='noopener noreferrer'>
+          www.josephlarrivy.com
+        </a>
+      </div>
+
     </>
   );
 }

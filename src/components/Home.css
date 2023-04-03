@@ -1,22 +1,62 @@
-.square {
-    /* position: absolute; */
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(-45deg, #6c63ff, white, #6c63ff, white);
-    background-size: 400% 400%;
-    animation: gradient 30s ease infinite;
+.home {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
-    
-@keyframes gradient {
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 10px white;
+    animation: text-shine 2s ease-out infinite;
+}
+
+@keyframes text-shine {
     0% {
-        background-position: 0% 50%;
+        text-shadow: 0 0 10px white;
     }
 
     50% {
-        background-position: 100% 50%;
+        text-shadow: 0 0 20px white;
     }
 
     100% {
-        background-position: 0% 50%;
+        text-shadow: 0 0 10px white;
     }
+}
+
+
+.title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    margin: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.linked-list {
+    background: linear-gradient(-45deg, #5a67d8, #8f94fb);
+}
+
+.stack {
+    background: linear-gradient(-45deg, #6c63ff, #4b3bff);
+}
+
+.square:hover {
+    transform: scale(1.1);
 }
