@@ -1,0 +1,14 @@
+#queue-container {
+}
+
+#queue-display-container {
+    /* background-color: aqua; */
+    width: 100%;
+    height: 60vh;
+}
+
+#queue-form-container {
+    /* background-color: black; */
+    width: 100%;
+    height: 20vh;
+}

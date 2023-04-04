@@ -12,8 +12,8 @@ const StackDisplay2 = ({ stack }) => {
     } else if (stack.length === 1) {
       stackAsObjects.push(
         {
-          'head': true,
-          'tail': true,
+          'top': true,
+          'bottom': true,
           'value': stack[0],
         }
       )
@@ -21,13 +21,13 @@ const StackDisplay2 = ({ stack }) => {
     } else if (stack.length === 2) {
       stackAsObjects.push(
         {
-          'head': false,
-          'tail': true,
+          'top': false,
+          'bottom': true,
           'value': stack[0],
         },
         {
-          'head': true,
-          'tail': false,
+          'top': true,
+          'bottom': false,
           'value': stack[1],
         }
       )
@@ -35,24 +35,24 @@ const StackDisplay2 = ({ stack }) => {
     } else {
       stackAsObjects.push(
         {
-          'head': false,
-          'tail': true,
+          'top': false,
+          'bottom': true,
           'value': stack[0],
         }
       )
       for (let i=1; i<stack.length-1; i++) {
         stackAsObjects.push(
           {
-            'head': false,
-            'tail': false,
+            'top': false,
+            'bottom': false,
             'value': stack[i],
           }
         )
       }
       stackAsObjects.push(
         {
-          'head': true,
-          'tail': false,
+          'top': true,
+          'bottom': false,
           'value': stack[stack.length-1],
         }
       )

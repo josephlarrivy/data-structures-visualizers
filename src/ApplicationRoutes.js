@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from "./components/Home";
 import LinkedListDisplay from './components/LinkedList/LinkedListDisplay';
 import Stack from "./components/Stack2/Stack2";
-import BinaryTree from "./components/BinaryTree/BinaryTree";
+import QueueComponent from "./components/Queue/Queue";
 
 
 const ApplicationRoutes = () => {
@@ -27,9 +27,9 @@ const ApplicationRoutes = () => {
           element={
             <Stack />}
         />
-        <Route exact path="/binarytree"
+        <Route exact path="/queue"
           element={
-            <BinaryTree />}
+            <QueueComponent />}
         />
       </Routes>
 
