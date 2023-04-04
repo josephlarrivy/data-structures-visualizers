@@ -27,7 +27,7 @@ const ApplicationRoutes = () => {
           element={
             <Stack />}
         />
-        <Route exact path="/tree"
+        <Route exact path="/binarytree"
           element={
             <BinaryTree />}
         />

@@ -1,6 +1,5 @@
 import React from "react";
-import NavBar from "../NavBar";
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Home.css'
 
@@ -10,21 +9,15 @@ const Home = () => {
     <div className="home-container">
       <h1>ComputerScienceVisualizer.com</h1>
       <div className="home">
-        <div className="square linked-list">
-          <h1 className="title">
-            <Link to={`/linkedlist`}>LinkedList</Link>
-          </h1>
-        </div>
-        <div className="square stack">
-          <h1 className="title">
-            <Link to={`/stack`}>Stack</Link>
-          </h1>
-        </div>
-        <div className="square stack">
-          <h1 className="title">
-            <Link to={`/binarytree`}>Tree</Link>
-          </h1>
-        </div>
+        <Link to={`/linkedlist`} className="square linked-list">
+          <h1 className="title">LinkedList</h1>
+        </Link>
+        <Link to={`/stack`} className="square stack">
+          <h1 className="title">Stack</h1>
+        </Link>
+        <Link to={`/binarytree`} className="square binarytree">
+          <h1 className="title">Binary Tree</h1>
+        </Link>
       </div>
     </div>
   )

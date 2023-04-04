@@ -9,7 +9,6 @@
 .title {
     font-size: 2rem;
     margin-bottom: 2rem;
-    text-decoration: none;
     color: white;
     text-shadow: 0 0 10px white;
     animation: text-shine 2s ease-out infinite;
@@ -50,11 +49,18 @@
 }
 
 .linked-list {
-    background: linear-gradient(-45deg, #5a67d8, #8f94fb);
+    background: linear-gradient(-45deg, #6c63ff, #4b3bff);
+    text-decoration: none;
 }
 
 .stack {
     background: linear-gradient(-45deg, #6c63ff, #4b3bff);
+    text-decoration: none;
+}
+
+.binarytree {
+    background: linear-gradient(-45deg, #6c63ff, #4b3bff);
+    text-decoration: none;
 }
 
 .square:hover {
