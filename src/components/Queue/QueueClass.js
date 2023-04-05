@@ -38,7 +38,14 @@ class Queue {
     for (let item of this.items) {
       arr.push(item)
     }
-    console.log(arr)
+    return arr
+  }
+
+  getAsReverseArray() {
+    let arr = []
+    for (let i=this.items.length-1; i>=0; i--) {
+      arr.push(this.items[i])
+    }
     return arr
   }
 }

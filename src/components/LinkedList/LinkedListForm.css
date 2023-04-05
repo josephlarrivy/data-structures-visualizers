@@ -23,7 +23,7 @@ label {
     font-weight: bold;
 }
 
-button[type="submit"] {
+button {
     padding: 10px 20px;
     background-color: #6c63ff;
     color: #fff;

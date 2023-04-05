@@ -1,30 +1,32 @@
 import React, { useState, useEffect } from "react";
-import Queue from './QueueClass'
+
+import './Queue.css'
+import QueueDisplayExplainer from "./QueueDisplayExplainer";
 
 
 const QueueDisplay = ({ queue }) => {
 
-  const [array, setArray] = useState(null)
+  const [array, setArray] = useState([])
 
   useEffect(() => {
-    const queueAsArray = queue.getAsArray()
+    const queueAsArray = queue.getAsReverseArray()
     setArray(queueAsArray)
     console.log(queueAsArray)
   }, [queue])
 
 
-
-
-
-
   return (
-    <div>
-      <p>queue display</p>
-      {array && array.map(item => {
-        return (
-          <p>{item}</p>
-        )
-      })}
+    <div id="queue-display-container-inner">
+      <QueueDisplayExplainer array={array} />
+      <div id="queue-items-container">
+        {array && array.map(item => {
+          return (
+            <div className="queue-diaplay-item-wrapper">
+              <p>{item}</p>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

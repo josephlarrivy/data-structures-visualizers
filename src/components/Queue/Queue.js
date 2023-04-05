@@ -14,7 +14,6 @@ const QueueComponent = () => {
     const queueAsArray = queue.getAsArray()
     for (let val of queueAsArray) {
       newQueue.enqueue(val)
-      console.log(val)
     }
     newQueue.enqueue(item);
     setQueue(newQueue);
@@ -25,7 +24,6 @@ const QueueComponent = () => {
     const queueAsArray = queue.getAsArray()
     for (let val of queueAsArray) {
       newQueue.enqueue(val)
-      console.log(val)
     }
     newQueue.dequeue();
     setQueue(newQueue);
@@ -34,10 +32,10 @@ const QueueComponent = () => {
   return (
     <div id="queue-container">
       <h1>Queue</h1>
-      <div id="queue-display-container">
+      <div id="queue-display-container-outer">
         <QueueDisplay queue={queue}/>
       </div>
-      <div id="queue-form-container">
+      <div id="queue-form-container-main">
         <QueueForm callEnqueue={callEnqueue} callDequeue={callDequeue}/>
       </div>
     </div>

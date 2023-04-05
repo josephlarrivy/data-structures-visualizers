@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 
+import './Queue.css'
+
+
 const QueueForm = ({ callEnqueue, callDequeue }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
     setValue(e.target.value)
-    console.log('change, new value:', value)
   }
 
   const handleAdd = (e) => {
@@ -19,12 +21,17 @@ const QueueForm = ({ callEnqueue, callDequeue }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleAdd}>
-        <input type="number" value={value} onChange={handleChange} />
-        <button type="submit">Enqueue</button>
-      </form>
-      <button onClick={handleRemove}>Dequeue</button>
+    <div id="queue-form-container">
+
+        <div id="queue-number-input-container">
+          <input id='queue-number-input' type="number" value={value} onChange={handleChange} max={100} min={-99} />
+        </div>
+        
+        <div id="queue-buttons-container">
+          <button onClick={handleAdd} type="submit">Enqueue</button>
+          <button onClick={handleRemove}>Dequeue</button>
+        </div>  
+
     </div>
   );
 };
