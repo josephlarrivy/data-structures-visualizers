@@ -131,31 +131,35 @@ button {
 
 
 
-
-
-
-
-
-#enqueue-action {
+#enqueue-dequeue-off {
     text-align: center;
     opacity: 0;
+
+    font-size: 18px;
+    font-weight: bold;
+    color:#6c63ff;
+    border: 3px solid #6c63ff;
+}
+
+
+#enqueue-dequeue-flash {
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: bold;
+    color:#6c63ff;
+    border: 3px solid #6c63ff;
 
     animation: alert;
     animation-duration: 2s;
 }
 
-#dequque-action {
-    text-align: center;
-    opacity: 0;
 
-    animation: alert;
-    animation-duration: 2s;
-}
 @keyframes alert {
     0%{
         opacity: 1;
     }
     100%{
-
+        opacity: 0;
     }
 }
