@@ -19,7 +19,7 @@ const Node = ({ value, index, head, tail, next, handleRemove }) => {
           next.value: {next !== null ? next : 'null'}
         </p>
       </div>
-      <button onClick={(event) => handleRemove(event, index)}>remove</button>
+      <button className="remove-button" onClick={(event) => handleRemove(event, index)}>remove</button>
       {head && <p className="head-tail">head</p>}
       {tail && <p className="head-tail">tail</p>}
     </div>

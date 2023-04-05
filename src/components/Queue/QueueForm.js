@@ -25,6 +25,8 @@ const QueueForm = ({ callEnqueue, callDequeue }) => {
     <div id="queue-form-container">
 
         <div id="queue-number-input-container">
+        <b>Enter a value:</b>
+        <br></br>
           <input id='queue-number-input' type="number" value={value} onChange={handleChange} max={100} min={-99} />
         </div>
         

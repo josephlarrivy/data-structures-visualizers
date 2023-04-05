@@ -8,7 +8,7 @@
     border: 3px solid #564dff;
     border-radius: 5px;
     padding: 10px;
-    min-height: 170px;
+    min-height: 200px;
 
 }
 
@@ -42,6 +42,20 @@ button:hover {
     background-color: #564dff;
 }
 
+.remove-button {
+    margin-top: 5px;
+        background-color: #564dff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        width: 100px;
+        height: 20px;
+        line-height: 1px;
+        /* added line-height property */
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+}
 
 .node-icon {
     padding: 3px;
@@ -62,4 +76,3 @@ button:hover {
     text-decoration: none;
     font-weight: bold;
 }
-
