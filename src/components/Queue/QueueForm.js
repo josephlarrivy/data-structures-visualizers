@@ -4,7 +4,7 @@ import './Queue.css'
 
 
 const QueueForm = ({ callEnqueue, callDequeue }) => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState(0);
 
   const handleChange = (e) => {
     setValue(e.target.value)
@@ -13,6 +13,7 @@ const QueueForm = ({ callEnqueue, callDequeue }) => {
   const handleAdd = (e) => {
     e.preventDefault();
     callEnqueue(value)
+    setValue(0)
   };
 
   const handleRemove = (e) => {

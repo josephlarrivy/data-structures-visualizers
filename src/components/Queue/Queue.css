@@ -131,19 +131,15 @@ button {
 
 
 
-#enqueue-dequeue-off {
+.enqueue-dequeue-off {
     text-align: center;
     opacity: 0;
-
-    font-size: 18px;
-    font-weight: bold;
-    color:#6c63ff;
-    border: 3px solid #6c63ff;
 }
 
 
-#enqueue-dequeue-flash {
+.enqueue-dequeue-flash {
     text-align: center;
+    opacity: 0;
 
     font-size: 18px;
     font-weight: bold;

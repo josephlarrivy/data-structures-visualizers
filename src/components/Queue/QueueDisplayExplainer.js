@@ -19,6 +19,10 @@ const QueueDisplayExplainer = ({array}) => {
   }, [array])
 
   const detectAddOrSubtract = () => {
+    if (array.length===0) {
+      setEnqueueAction('enqueue-dequeue-off')
+      setDequeueAction('enqueue-dequeue-off')
+    }
     if (array.length>numSpacers) {
       setEnqueueAction('enqueue-dequeue-flash')
       setNumSpacers(array.length)
@@ -44,7 +48,7 @@ const QueueDisplayExplainer = ({array}) => {
       <div id="back-of-queue-explainer">
         <p>Click 'Enqueue' to add items to the back of the queue</p>
         <div id="back-arrow"></div>
-        <p id={enqueueAction}>Add</p>
+        <p className={enqueueAction}>Add</p>
       </div>
 
       {spacers.map(item => {
@@ -58,7 +62,7 @@ const QueueDisplayExplainer = ({array}) => {
       <div id="front-of-queue-explainer">
         <p>Click 'Dequeue' to remove items from the front of the queue</p>
         <div id="front-arrow"></div>
-        <p id={dequeueAction}>Subtract</p>
+        <p className={dequeueAction}>Remove</p>
       </div>
     </div>
   )

@@ -11,7 +11,6 @@ const QueueDisplay = ({ queue }) => {
   useEffect(() => {
     const queueAsArray = queue.getAsReverseArray()
     setArray(queueAsArray)
-    console.log(queueAsArray)
   }, [queue])
 
 
